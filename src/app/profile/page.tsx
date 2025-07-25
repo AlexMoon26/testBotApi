@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { useAuth } from '../auth-provider';
-import { useEffect } from 'react';
+import { useRouter } from "next/navigation";
+import { useAuth } from "../auth-provider";
+import { useEffect } from "react";
+import Image from "next/image";
 
 export default function ProfilePage() {
   const { user, logout } = useAuth();
@@ -10,7 +11,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     if (!user) {
-      router.push('/login');
+      router.push("/login");
     }
   }, [user, router]);
 
@@ -22,10 +23,12 @@ export default function ProfilePage() {
         <div className="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
           <div className="flex flex-col items-center">
             {user.photo_url && (
-              <img
+              <Image
+                width={240}
+                height={240}
                 src={user.photo_url}
                 alt="Profile"
-                className="w-24 h-24 rounded-full mb-4"
+                className="rounded-full mb-4"
               />
             )}
             <h1 className="text-2xl font-bold mb-2 text-black">
