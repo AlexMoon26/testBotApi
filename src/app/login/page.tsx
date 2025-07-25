@@ -53,7 +53,7 @@ export default function LoginPage() {
     const top = (window.screen.height - height) / 2;
 
     window.open(
-      `https://oauth.telegram.org/auth?bot_id=8483569149:AAGT8OWFqFglGZAYJEdRXpcS3W-Y-3P_qYI&origin=${encodeURIComponent(
+      `https://oauth.telegram.org/auth?bot_id=8449799485:AAFEmWpFtA_G6WiyY42h-A6zPSwQdqTjnPU&origin=${encodeURIComponent(
         window.location.origin
       )}&embed=0&request_access=write`,
       "telegram_auth",
